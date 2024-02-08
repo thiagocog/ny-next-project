@@ -27,11 +27,26 @@ export default function Points() {
         description: "The Brooklyn Bridge is a cable suspension bridge on the East River that connects the borough of Manhattan to the borough of Brooklyn in New York City. The bridge is one of New York City's most famous landmarks and an icon of American engineering.",
         image: "point_5.png"
     }
-]
+  ]
 
   return (
     <>
-      
+      <h1 className="text-center text-secondary mt-5">Poinst of interest in New York</h1>
+      <div className="container">
+        {
+          points.map((point, index) => (
+            <div key={index} className="row my-3 border rounded-5 p-3">
+              <div className="col-md-4">
+                <img src={`assets/images/${point.image}`} alt={point.title} className="img-fluid"/>
+              </div>
+              <div className="col-md-8">
+                <h4>{point.title}</h4>
+                <p>{point.description}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
     </>
   );
 }

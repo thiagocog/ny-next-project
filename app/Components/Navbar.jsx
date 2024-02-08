@@ -13,6 +13,9 @@ export default function Navbar() {
               width={50}
               height={50}
             />
+            <span className="ms-3 text-info">NEW YORK CITY</span>
+            <span className="mx-2">|</span>
+            <span>USA</span>
           </div>
           <div className="col p-3 text-end align-self-center">
             <Link href="/" className="link">Home</Link>
